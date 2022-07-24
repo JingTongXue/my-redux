@@ -1,4 +1,6 @@
-import { createStore } from "redux";
+// import { createStore } from "redux";
+
+import { createStore } from '../my-redux'
 
 function countReducer(state = 0, action: any) {
   switch(action.type) {
