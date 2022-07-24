@@ -5,10 +5,10 @@
 export default function createStore(reducer:any, enhancer?: any) {
   // reducer参数: 用来让dispatch来修改状态值  
 
-
-  // if (enhancer) {
-  //   return enhancer(createStore)(reducer);
-  // }
+  // 中间件接入
+  if (enhancer) {
+    return enhancer(createStore)(reducer);
+  }
 
   // 定义当前状态值
   let currentState: any;

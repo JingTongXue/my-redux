@@ -24,14 +24,14 @@ reportWebVitals();
 
 // 柯里化实现
 
-function compose(funcs: []) {
-  if(funcs.length === 0) {
-    return (arg: any) => arg;
-  }
-  if(funcs.length === 1) {
-    //@ts-ignore
-    return funcs[0];
-  }
-  //@ts-ignore
-  return funcs.reduce((a,b) => (...args) => a(b(...args)));
-}
+// function compose(funcs: []) {
+//   if(funcs.length === 0) {
+//     return (arg: any) => arg;
+//   }
+//   if(funcs.length === 1) {
+//     //@ts-ignore
+//     return funcs[0];
+//   }
+//   //@ts-ignore
+//   return funcs.reduce((a,b) => (...args) => a(b(...args)));
+// }
