@@ -20,3 +20,18 @@ store.subscribe(root);
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+
+// 柯里化实现
+
+function compose(funcs: []) {
+  if(funcs.length === 0) {
+    return (arg: any) => arg;
+  }
+  if(funcs.length === 1) {
+    //@ts-ignore
+    return funcs[0];
+  }
+  //@ts-ignore
+  return funcs.reduce((a,b) => (...args) => a(b(...args)));
+}
